@@ -227,3 +227,15 @@ footer {
   transform: translateY(-4px);
   background-color: #dfe6e9;
 }
+
+.centralizado {
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-group a.btn-secondary {
+  width: auto;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
