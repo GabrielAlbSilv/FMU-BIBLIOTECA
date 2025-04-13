@@ -195,3 +195,35 @@ footer {
   height: auto;
   margin-bottom: 30px;
 }
+
+
+.painel-opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.painel-item {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.2s ease;
+}
+
+.painel-item img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.painel-item:hover {
+  transform: translateY(-4px);
+  background-color: #dfe6e9;
+}
