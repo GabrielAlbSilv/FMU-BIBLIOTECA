@@ -11,7 +11,9 @@ jobs:
 
     steps:
       - name: Checkout do repositório
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Gerar o sitemap
         uses: cicirello/generate-sitemap@v1
@@ -19,5 +21,3 @@ jobs:
           base-url-path: https://gabrielalbsilv.github.io/FMU-BIBLIOTECA/
           sitemap-type: xml
           file-types: html,pdf
-
-
