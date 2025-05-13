@@ -1,0 +1,23 @@
+name: Gerar Sitemap
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v2
+
+      - name: Gerar o sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://gabrielalbsilv.github.io/FMU-BIBLIOTECA/
+          sitemap-type: xml
+          file-types: html,pdf
+
+
