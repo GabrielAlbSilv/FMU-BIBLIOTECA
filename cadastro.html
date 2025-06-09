@@ -11,23 +11,24 @@
 <body>
   <main class="form-container">
     <h2>Cadastro de cliente</h2>
-    <form>
-      <input type="text" placeholder="Nome completo" required>
-      <input type="number" placeholder="Idade" required>
-      <select required>
+    <form action= "cadastro_usuario.php" method="POST">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="number" name="idade" placeholder="Idade" required>
+      <select name="sexo" required>
         <option value="">Sexo</option>
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
         <option value="outro">Outro</option>
       </select>
-      <input type="text" placeholder="CPF" id="cpf" maxlength="14" oninput="mascaraCPF(this)" required>
-      <input type="text" placeholder="CEP" id="cep" maxlength="9" oninput="mascaraCep(this)" required>
-      <input type="text" placeholder="Endereço" required>
-      <input type="number" placeholder="Número" required>
-      <input type="text" placeholder="Complemento" required>
-      <input type="tel" placeholder="Telefone 1" required>
-      <input type="tel" placeholder="Telefone 2">
-      <input type="email" placeholder="E-mail" required>
+      <input type="text" name="cpf" placeholder="CPF" id="cpf" maxlength="14" oninput="mascaraCPF(this)" required>
+      <input type="text" name="cep" placeholder="CEP" id="cep" maxlength="9" oninput="mascaraCep(this)" required>
+      <input type="text" name="endereco" placeholder="Endereço" required>
+      <input type="text" name="numero" placeholder="Número" id="numero" required>
+      <input type="text" name="complemento" placeholder="Complemento"  id="complemento" required>
+      <input type="tel" name="telefone1" placeholder="Telefone 1" oninput="mascaraTelefone(this)" maxlength="15" required>
+      <input type="tel" name="telefone2" placeholder="Telefone 2" oninput="mascaraTelefone(this)" maxlength="15">
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input id="senha"type="password" name="senha" required maxlength="32" placeholder="Senha" />
       <button type="submit">Cadastrar</button>
       <div class="button-exit">
         <a href="index.html" class="btn-secondary btn-small">Cancelar</a>
