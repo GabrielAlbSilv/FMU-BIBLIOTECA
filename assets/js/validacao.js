@@ -31,3 +31,17 @@ function mascaraTelefone(campo) {
     else
       campo.value = valor;
   }
+
+
+  function togglePassword() {
+    const senhaInput = document.getElementById("senha");
+    const senhaType = senhaInput.getAttribute("type");
+    senhaInput.setAttribute("type", senhaType === "password" ? "text" : "password");
+
+    //if ternário - sintaxe
+    //não tem a palavra if
+    //teste lógico ? ação se V : ação se F
+    //type password: *******
+    //type text: sersdfsf
+
+}

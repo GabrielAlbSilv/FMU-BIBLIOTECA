@@ -239,3 +239,24 @@ footer {
   font-size: 14px;
 }
 
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px; /* espaço para o olho */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-show-password {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #666;
+  z-index: 10;
+}

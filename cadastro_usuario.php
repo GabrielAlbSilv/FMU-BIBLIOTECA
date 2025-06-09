@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $verifica_email->execute();
 
   if ($verifica_email->rowCount() > 0) {
-    echo "Este e-mail já está cadastrado.";
+    echo "E-MAIL OU CPF JÁ CADASTRADOS";
     exit;
   }
 
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $verifica_cpf->execute();
 
   if ($verifica_cpf->rowCount() > 0) {
-    echo "Este CPF já está cadastrado.";
+    echo "E-MAIL OU CPF JÁ CADASTRADOS";
     exit;
   }
 
