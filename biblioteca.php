@@ -31,15 +31,15 @@ if (!isset($_SESSION["usuario_id"])) {
     <section class="opcoes">
       <h2>Menu Principal</h2>
       <div class="card-group">
-        <a href="cadastro-livros.html" class="card-opcao">
+        <a href="cadastro-livros.php" class="card-opcao">
           <img src="assets/images/cadastrar.png" alt="Cadastrar Livro">
           <span>Cadastrar Livro</span>
         </a>
-        <a href="estoque.html" class="card-opcao">
+        <a href="estoque.php" class="card-opcao">
           <img src="assets/images/estoque.png" alt="Consultar Estoque">
           <span>Consultar Estoque</span>
         </a>
-        <a href="emprestimos.html" class="card-opcao">
+        <a href="emprestimos.php" class="card-opcao">
           <img src="assets/images/emprestimos.png" alt="Verificar Emprestados">
           <span>Empréstimos</span>
         </a>

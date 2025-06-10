@@ -68,3 +68,31 @@ atualizarUsuario();
 
 // Atualiza a cada 5 segundos
 setInterval(atualizarUsuario, 5000);
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const isbnInput = document.getElementById('isbn');
+
+  isbnInput.addEventListener('input', function(e) {
+    let value = isbnInput.value;
+
+    // Remove tudo que não for número ou hífen
+    value = value.replace(/[^0-9\-]/g, '');
+
+    // Remove hífens existentes para reformatar
+    value = value.replace(/\-/g, '');
+
+    // Aplica a máscara ISBN-13: 978-3-16-148410-0
+    // Coloca hífen após os dígitos 3, 4, 6 e 12
+    let formatted = '';
+    for (let i = 0; i < value.length && i < 13; i++) {
+      formatted += value[i];
+      if (i === 2 || i === 3 || i === 5 || i === 11) {
+        formatted += '-';
+      }
+    }
+
+    isbnInput.value = formatted;
+  });
+});
