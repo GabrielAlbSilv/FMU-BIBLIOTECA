@@ -53,7 +53,7 @@ $livros = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endif; ?>
             <div class="button-group centralizado" style="margin-top: 10px;">
               <a href="editar_livro.php?id=<?= $livro['id'] ?>" class="btn-secondary">Editar</a>
-              <a href="excluir_livro.php?id=<?= $livro['id'] ?>" class="btn-danger" onclick="return confirm('Tem certeza que deseja excluir este livro?');">Excluir</a>
+              <a href="excluir_livro.php?id=<?= $livro['id'] ?>" class="btn-secondary" onclick="return confirm('Tem certeza que deseja excluir este livro?');">Excluir</a>
             </div>
           </div>
         <?php endforeach; ?>
