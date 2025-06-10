@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insert->bindParam(":capa", $caminhoCompleto);
 
     if ($insert->execute()) {
-        header("Location: biblioteca.html");
+        header("Location: biblioteca.index");
         exit;
     } else {
         echo "Erro ao cadastrar livro: " . $insert->errorInfo()[2];
