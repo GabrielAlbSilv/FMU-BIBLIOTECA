@@ -45,3 +45,26 @@ function mascaraTelefone(campo) {
     //type text: sersdfsf
 
 }
+
+
+function atualizarUsuario() {
+  fetch('usuario_logado.php')
+    .then(response => response.json())
+    .then(data => {
+      const caixa = document.getElementById('usuario-logado-box');
+      if (data.usuario) {
+        caixa.textContent = 'Usuário: ' + data.usuario;
+      } else {
+        caixa.textContent = 'Usuário não logado';
+      }
+    })
+    .catch(err => {
+      console.error('Erro ao buscar usuário:', err);
+    });
+}
+
+// Atualiza na inicialização
+atualizarUsuario();
+
+// Atualiza a cada 5 segundos
+setInterval(atualizarUsuario, 5000);

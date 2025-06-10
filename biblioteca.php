@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: index.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,9 +16,16 @@
   <link rel="icon" href="assets/images/icon.png" type="image/x-icon">
 </head>
 <body>
+
+
   <header>
     <h1>Biblioteca Novo Horizonte</h1>
+    
   </header>
+
+ <div id="usuario-logado-box" class="usuario-box loading">
+    Carregando usuário...
+  </div>
 
   <main>
     <section class="opcoes">
@@ -33,7 +48,13 @@
 
     <div class="centralizado">
       <a href="index.html" class="btn-secondary btn-small">Voltar</a>
+      <a href="logout.php" class="btn-secondary btn-small">Sair</a>
     </div>
   </main>
+
+</div>
+
+
+<script src="assets/js/validacao.js"></script>
 </body>
 </html>

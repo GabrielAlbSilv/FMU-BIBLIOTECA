@@ -15,8 +15,8 @@
 
     <div class="form-login">
       <h2>BIBLIOTECA NOVO HORIZONTE</h2>
-      <form action="biblioteca.html">
-        <input type="email" placeholder="E-mail" required />
+      <form action="valida_login.php" method="POST">
+        <input type="email" placeholder="E-mail" name="email"  id="email"  required/>
         <div class="password-wrapper">
           <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required />
           <span class="btn-show-password" onclick="togglePassword()">
