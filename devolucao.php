@@ -18,6 +18,10 @@ if (!isset($_SESSION["usuario_id"])) {
 </head>
 
 <body>
+
+ <div id="usuario-logado-box" class="usuario-box loading">
+    Carregando usuário...
+  </div>
   <main class="form-container">
     <h2>Devolução de Livros</h2>
 

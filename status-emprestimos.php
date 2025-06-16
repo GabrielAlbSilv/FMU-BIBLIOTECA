@@ -56,6 +56,10 @@ $finalizados = $con->query($sqlFinalizados)->fetchAll(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+ <div id="usuario-logado-box" class="usuario-box loading">
+    Carregando usuário...
+  </div>
   <main class="form-container">
     <h2>Empréstimos Ativos</h2>
     <?php if (count($ativos) > 0): ?>
@@ -101,5 +105,8 @@ $finalizados = $con->query($sqlFinalizados)->fetchAll(PDO::FETCH_ASSOC);
       <a href="emprestimos.php" class="btn-secondary btn-small">Voltar</a>
     </div>
   </main>
+
+   <script src="assets/js/validacao.js"></script> 
+
 </body>
 </html>

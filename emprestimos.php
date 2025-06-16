@@ -16,6 +16,10 @@ if (!isset($_SESSION["usuario_id"])) {
   <link rel="icon" href="assets/images/icon.png" type="image/x-icon">
 </head>
 <body>
+ <div id="usuario-logado-box" class="usuario-box loading">
+    Carregando usuário...
+  </div>
+
   <main class="form-container">
     <h2>Empréstimos</h2>
 

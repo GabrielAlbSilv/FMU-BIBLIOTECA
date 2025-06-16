@@ -107,6 +107,11 @@ if (isset($_GET['success']) && $_GET['success'] == '1') {
 </head>
 
 <body>
+
+ <div id="usuario-logado-box" class="usuario-box loading">
+    Carregando usuário...
+  </div>
+  
   <main class="form-container">
     <h2>Realizar Empréstimo</h2>
 
