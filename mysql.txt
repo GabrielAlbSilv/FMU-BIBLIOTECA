@@ -1,0 +1,43 @@
+CREATE DATABASE biblioteca_fmu;
+USE biblioteca_fmu;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  idade INT,
+  sexo VARCHAR(10),
+  cpf VARCHAR(14) UNIQUE,
+  endereco VARCHAR(255),
+  numero VARCHAR(10),
+  complemento VARCHAR(200),
+  telefone1 VARCHAR(15),
+  telefone2 VARCHAR(15),
+  email VARCHAR(100) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE livros (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(255),
+  autor VARCHAR(255),
+  quantidade INT,
+  genero VARCHAR(100),
+  isbn VARCHAR(20) UNIQUE,
+  ano_publicacao YEAR,
+  editora VARCHAR(255) AFTER,
+  pais_publicacao VARCHAR(80),
+  paginas INT AFTER quantidade,
+  idade_recomendada VARCHAR(50),
+  idioma VARCHAR(50),
+  capa VARCHAR(255)
+);
+
+CREATE TABLE emprestimos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT,
+  livro_id INT,
+  data_emprestimo DATE,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+  data_devolucao DATE DEFAULT NULL,
+  FOREIGN KEY (livro_id) REFERENCES livros(id)
+);

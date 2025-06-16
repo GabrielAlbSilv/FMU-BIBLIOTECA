@@ -332,3 +332,104 @@ form input[type="checkbox"] + label:hover {
 }
 
 
+
+/* Container centralizado com sombra e espaçamento */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+/* Títulos */
+.container h2, .container h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Informações do usuário */
+.info-box p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Cartão de empréstimo */
+.emprestimo {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9fc;
+}
+
+.emprestimo p {
+  margin: 6px 0;
+  color: #444;
+}
+
+/* Botão voltar */
+.btn-voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #005fa3;
+}
+
+/* Texto em vermelho para devolução pendente */
+.emprestimo span {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* Estilo para mensagem de sucesso */
+.msg-sucesso {
+  background-color: #d4edda;       /* Verde claro */
+  color: #155724;                  /* Verde escuro */
+  border: 1.5px solid #c3e6cb;    /* Borda verde */
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(21, 87, 36, 0.2);
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Estilo para mensagem de erro */
+.msg-erro {
+  background-color: #f8d7da;       /* Vermelho claro */
+  color: #721c24;                  /* Vermelho escuro */
+  border: 1.5px solid #f5c6cb;    /* Borda vermelho suave */
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(114, 28, 36, 0.2);
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Para deixar as mensagens centralizadas na página */
+.form-container > .msg-sucesso,
+.form-container > .msg-erro {
+  margin-left: auto;
+  margin-right: auto;
+}
+

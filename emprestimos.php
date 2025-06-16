@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: index.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,23 +20,27 @@
     <h2>Empréstimos</h2>
 
     <div class="card-group">
-      <a href="novo-emprestimo.html" class="card-opcao">
+      <a href="novo-emprestimo.php" class="card-opcao">
         <img src="assets/images/emprestarlivro.png" alt="Emprestar livro">
         <span>Emprestar livro</span>
       </a>
-      <a href="status-emprestimos.html" class="card-opcao">
+      <a href="status-emprestimos.php" class="card-opcao">
         <img src="assets/images/statusemprestimo.png" alt="Consultar empréstimos">
         <span>Consultar empréstimos</span>
       </a>
-      <a href="devolucao.html" class="card-opcao">
+      <a href="devolucao.php" class="card-opcao">
         <img src="assets/images/devolucao.png" alt="Devolução">
         <span>Devolução</span>
       </a>
     </div>
 
     <div class="centralizado">
-      <a href="biblioteca.html" class="btn-secondary btn-small">Voltar</a>
+      <a href="biblioteca.php" class="btn-secondary btn-small">Voltar</a>
     </div>
   </main>
+
+  <script src="assets/js/validacao.js"></script>
 </body>
+
+
 </html>

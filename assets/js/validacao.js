@@ -96,3 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
     isbnInput.value = formatted;
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const botoes = document.querySelectorAll(".mostrar-detalhes");
+
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", () => {
+      const detalhes = botao.nextElementSibling;
+      const estaVisivel = detalhes.style.display === "block";
+
+      detalhes.style.display = estaVisivel ? "none" : "block";
+      botao.textContent = estaVisivel ? "Exibir Detalhes" : "Ocultar Detalhes";
+    });
+  });
+});
+
+

@@ -23,11 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: biblioteca.php");
             exit;
         } else {
-            echo "<script>alert('Senha incorreta.'); window.location.href='login.html';</script>";
+            echo "<script>alert('Senha incorreta.'); window.location.href='index.html';</script>";
             exit;
+            header("Location: index.html");
         }
     } else {
-        echo "<script>alert('E-mail não encontrado.'); window.location.href='login.html';</script>";
+        echo "<script>alert('E-mail não encontrado.'); window.location.href='index.html';</script>";
         exit;
     }
 }
